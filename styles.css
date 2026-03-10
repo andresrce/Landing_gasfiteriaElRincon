@@ -2,6 +2,8 @@
   --azul-principal: #0b4da2;
   --azul-secundario: #0f6ad6;
   --azul-oscuro: #07346f;
+  --verde-whatsapp: #25d366;
+  --verde-whatsapp-oscuro: #179b4b;
   --blanco: #ffffff;
   --gris-fondo: #f3f7fd;
   --gris-texto: #1f2a37;
@@ -79,14 +81,26 @@ header {
 }
 
 .logo-mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--azul-secundario), var(--azul-oscuro));
-  display: grid;
-  place-items: center;
-  color: var(--blanco);
-  font-size: 1.15rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow: 0 10px 24px rgba(7, 52, 111, 0.16);
+}
+
+.logo-text {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.logo-text small {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #5d769b;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 nav ul {
@@ -125,10 +139,21 @@ nav a {
   background: linear-gradient(135deg, var(--azul-secundario), var(--azul-principal));
 }
 
+.btn[data-wa] {
+  color: var(--blanco);
+  background: linear-gradient(135deg, var(--verde-whatsapp), var(--verde-whatsapp-oscuro));
+}
+
 .btn-outline {
   color: var(--azul-principal);
   background: var(--blanco);
   border: 2px solid var(--azul-principal);
+}
+
+.btn-outline[data-wa] {
+  color: var(--verde-whatsapp-oscuro);
+  border-color: var(--verde-whatsapp);
+  background: #f2fff7;
 }
 
 .hero {
@@ -192,6 +217,71 @@ nav a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.service-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-group {
+  border: 1px solid #d8e5fa;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  box-shadow: var(--sombra);
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.service-group:hover {
+  transform: translateY(-4px);
+  border-color: #8ab6f5;
+  box-shadow: 0 18px 36px rgba(7, 52, 111, 0.18);
+  background: linear-gradient(180deg, #ffffff 0%, #eef6ff 100%);
+}
+
+.service-group-index {
+  margin: 0 0 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5d769b;
+}
+
+.service-group h3 {
+  margin: 0 0 0.65rem;
+  color: var(--azul-oscuro);
+}
+
+.service-links {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0;
+}
+
+.service-links span {
+  font-weight: 700;
+  color: var(--azul-secundario);
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.service-links span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: var(--verde-whatsapp);
 }
 
 .card {
@@ -315,6 +405,33 @@ footer {
   margin-top: 3rem;
 }
 
+.whatsapp-float {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 25;
+  width: 68px;
+  height: 68px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--verde-whatsapp), var(--verde-whatsapp-oscuro));
+  box-shadow: 0 18px 40px rgba(23, 155, 75, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 22px 45px rgba(23, 155, 75, 0.42);
+}
+
+.whatsapp-float img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
@@ -355,6 +472,120 @@ footer {
   padding: 1rem;
 }
 
+.media-section {
+  padding-top: 0;
+}
+
+.media-stack {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.media-card {
+  background: var(--blanco);
+  border: 1px solid #dbe8fb;
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--sombra);
+}
+
+.media-card h2,
+.media-card h3 {
+  margin-top: 0;
+}
+
+.media-card p {
+  margin-top: 0.4rem;
+  color: #42546f;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 1fr);
+  gap: 0.9rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 0.4rem;
+}
+
+.carousel-track::-webkit-scrollbar {
+  height: 10px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+  background: #c6dbfb;
+  border-radius: 999px;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #d8e5fa;
+  background: #f8fbff;
+}
+
+.carousel-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  padding: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #28456d;
+}
+
+.carousel-control {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: #e9f3ff;
+  color: var(--azul-oscuro);
+  font-size: 1.25rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.video-card {
+  border: 1px solid #d8e5fa;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f8fbff;
+}
+
+.video-card video {
+  width: 100%;
+  display: block;
+  background: #000;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.video-card p,
+.carousel-caption {
+  margin: 0;
+}
+
+.video-card p {
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #28456d;
+}
+
 .menu-toggle {
   display: none;
 }
@@ -362,11 +593,20 @@ footer {
 @media (max-width: 950px) {
   .hero-grid,
   .cards,
+  .service-groups,
   .coverage-grid,
   .contact-grid,
   .footer-grid,
   .service-layout {
     grid-template-columns: 1fr;
+  }
+
+  .carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-control {
+    display: none;
   }
 
   nav ul {
@@ -394,5 +634,17 @@ footer {
     background: #f3f8ff;
     padding: 0.6rem;
     font-weight: 700;
+  }
+
+  .whatsapp-float {
+    right: 1rem;
+    bottom: 1rem;
+    width: 62px;
+    height: 62px;
+  }
+
+  .logo-mark {
+    width: 48px;
+    height: 48px;
   }
 }

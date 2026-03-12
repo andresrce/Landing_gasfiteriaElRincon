@@ -17,6 +17,10 @@ const SITE_CONFIG = {
   brand: "Gasfiteria El Rincón"
 };
 
+const FORM_TRACKING_CONFIG = {
+  sheetEndpoint: "https://script.google.com/macros/s/AKfycbzpEVhpHfjKAnaj8yS4LyrU-7p0OiaKsdQx_chpVVcX8fBwq4EZU30leA8qP-j-UTbSmQ/exec"
+};
+
 function toWhatsappMessage(formData) {
   const raw = [
     `Hola, necesito cotizacion con ${SITE_CONFIG.brand}`,
@@ -29,15 +33,85 @@ function toWhatsappMessage(formData) {
   return `https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(raw)}`;
 }
 
+function updateHiddenField(form, fieldName, fieldValue) {
+  const input = form.querySelector(`input[name='${fieldName}']`);
+  if (input) {
+    input.value = fieldValue;
+  }
+}
+
+function buildLeadPayload(form, formData, submitChannel) {
+  const formId = form.dataset.formId || formData.get("form_id") || form.id || "form-sin-id";
+
+  return {
+    sent_at: new Date().toISOString(),
+    form_id: formId,
+    submit_channel: submitChannel,
+    nombre: formData.get("nombre") || "",
+    telefono: formData.get("telefono") || "",
+    comuna: formData.get("comuna") || "",
+    servicio: formData.get("servicio") || "",
+    mensaje: formData.get("mensaje") || "",
+    canal_respuesta: formData.get("canal") || "",
+    pagina_origen: window.location.href,
+    page_title: document.title,
+    user_agent: navigator.userAgent
+  };
+}
+
+async function saveLeadToGoogleSheets(payload) {
+  if (!FORM_TRACKING_CONFIG.sheetEndpoint) {
+    return;
+  }
+
+  try {
+    await fetch(FORM_TRACKING_CONFIG.sheetEndpoint, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify(payload),
+      keepalive: true
+    });
+  } catch (error) {
+    console.error("No se pudo registrar el lead en Google Sheets.", error);
+  }
+}
+
 const quickForms = document.querySelectorAll("[data-whatsapp-form]");
 quickForms.forEach((form) => {
-  form.addEventListener("submit", (e) => {
-    const intent = form.querySelector("input[name='canal']:checked")?.value;
-    if (intent === "whatsapp") {
-      e.preventDefault();
-      const data = new FormData(form);
-      window.open(toWhatsappMessage(data), "_blank");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const responseChannel = form.querySelector("input[name='canal']:checked")?.value || "correo";
+    const submitChannel = responseChannel === "whatsapp" ? "whatsapp" : "correo";
+
+    updateHiddenField(form, "form_id", form.dataset.formId || form.id || "form-sin-id");
+    updateHiddenField(form, "canal_envio", submitChannel);
+    updateHiddenField(form, "fecha_envio", new Date().toISOString());
+    updateHiddenField(form, "pagina_origen", window.location.href);
+
+    const data = new FormData(form);
+    const payload = buildLeadPayload(form, data, submitChannel);
+
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: "lead_form_submit",
+        formId: payload.form_id,
+        submitChannel: payload.submit_channel,
+        responseChannel: payload.canal_respuesta
+      });
     }
+
+    await saveLeadToGoogleSheets(payload);
+
+    if (submitChannel === "whatsapp") {
+      window.open(toWhatsappMessage(data), "_blank");
+      return;
+    }
+
+    HTMLFormElement.prototype.submit.call(form);
   });
 });
 

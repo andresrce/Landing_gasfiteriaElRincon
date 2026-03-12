@@ -211,10 +211,20 @@
           </p>
 
           <div class="contact-grid">
-            <form action="https://formsubmit.co/contacto@gasfiteriaelrincon.cl" method="POST" data-whatsapp-form>
+            <form
+              id="contact-form"
+              action="https://formsubmit.co/contacto@gasfiteriaelrincon.cl"
+              method="POST"
+              data-whatsapp-form
+              data-form-id="landing-contacto-principal"
+            >
               <input type="hidden" name="_subject" value="Nueva solicitud web - Gasfiteria El Rincón" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="form_id" value="landing-contacto-principal" />
+              <input type="hidden" name="canal_envio" value="correo" />
+              <input type="hidden" name="fecha_envio" value="" />
+              <input type="hidden" name="pagina_origen" value="https://www.gasfiteriaelrincon.cl/" />
               <label for="nombre">Nombre</label>
               <input id="nombre" name="nombre" type="text" required />
 

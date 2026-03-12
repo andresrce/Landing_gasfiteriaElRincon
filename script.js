@@ -105,8 +105,10 @@ async function sendLeadByFormSubmit(form) {
 
 const quickForms = document.querySelectorAll("[data-whatsapp-form]");
 quickForms.forEach((form) => {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  const handleFormSend = async () => {
+    if (!form.reportValidity()) {
+      return;
+    }
 
     if (form.dataset.submitting === "true") {
       return;
@@ -155,6 +157,20 @@ quickForms.forEach((form) => {
     } finally {
       form.dataset.submitting = "false";
     }
+  };
+
+  const submitButton = form.querySelector("[data-form-send]");
+  if (submitButton) {
+    submitButton.addEventListener("click", handleFormSend);
+  }
+
+  form.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" || event.target.tagName === "TEXTAREA") {
+      return;
+    }
+
+    event.preventDefault();
+    handleFormSend();
   });
 });
 

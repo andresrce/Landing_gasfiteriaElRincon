@@ -21,6 +21,21 @@ const FORM_TRACKING_CONFIG = {
   sheetEndpoint: "https://script.google.com/macros/s/AKfycbzpEVhpHfjKAnaj8yS4LyrU-7p0OiaKsdQx_chpVVcX8fBwq4EZU30leA8qP-j-UTbSmQ/exec"
 };
 
+function setFormStatus(form, message, type) {
+  let status = form.querySelector("[data-form-status]");
+
+  if (!status) {
+    status = document.createElement("p");
+    status.setAttribute("data-form-status", "");
+    status.setAttribute("aria-live", "polite");
+    status.style.marginTop = "1rem";
+    form.appendChild(status);
+  }
+
+  status.textContent = message;
+  status.style.color = type === "error" ? "#b42318" : "#0f766e";
+}
+
 function toWhatsappMessage(formData) {
   const raw = [
     `Hola, necesito cotizacion con ${SITE_CONFIG.brand}`,
@@ -79,10 +94,25 @@ async function saveLeadToGoogleSheets(payload) {
   }
 }
 
+async function sendLeadByFormSubmit(form) {
+  await fetch(form.action, {
+    method: form.method || "POST",
+    mode: "no-cors",
+    body: new FormData(form),
+    keepalive: true
+  });
+}
+
 const quickForms = document.querySelectorAll("[data-whatsapp-form]");
 quickForms.forEach((form) => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    if (form.dataset.submitting === "true") {
+      return;
+    }
+
+    form.dataset.submitting = "true";
 
     const responseChannel = form.querySelector("input[name='canal']:checked")?.value || "correo";
     const submitChannel = responseChannel === "whatsapp" ? "whatsapp" : "correo";
@@ -104,14 +134,27 @@ quickForms.forEach((form) => {
       });
     }
 
-    await saveLeadToGoogleSheets(payload);
+    try {
+      await Promise.all([
+        saveLeadToGoogleSheets(payload),
+        sendLeadByFormSubmit(form)
+      ]);
 
-    if (submitChannel === "whatsapp") {
-      window.open(toWhatsappMessage(data), "_blank");
-      return;
+      if (submitChannel === "whatsapp") {
+        setFormStatus(form, "Solicitud enviada. Se abrira WhatsApp para continuar.", "success");
+        form.reset();
+        window.open(toWhatsappMessage(data), "_blank");
+        return;
+      }
+
+      setFormStatus(form, "Solicitud enviada correctamente. Te responderemos pronto.", "success");
+      form.reset();
+    } catch (error) {
+      console.error("No se pudo enviar el formulario.", error);
+      setFormStatus(form, "No se pudo enviar la solicitud. Intenta nuevamente.", "error");
+    } finally {
+      form.dataset.submitting = "false";
     }
-
-    HTMLFormElement.prototype.submit.call(form);
   });
 });
 

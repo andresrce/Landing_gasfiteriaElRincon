@@ -264,13 +264,13 @@ const MEDIA_LIBRARY = {
       },
       {
         type: "image",
-        src: "proyectos/reparacion-calefont.jpeg",
+        src: "proyectos/reparacion-calefont-exterior.jpeg",
         alt: "Reparacion de calefont a gas en casa en Quilpue",
         caption: "Diagnostico y reparacion de calefont domiciliario.",
       },
       {
-        type: "image",
-        src: "proyectos/reparacion-calefont-trotter.jpeg",
+        type: "video",
+        src: "proyectos/reparacion-calefont-trotter.mp4",
         alt: "Reparacion de calefont Trotter en vivienda en Viña del Mar",
         caption: "Servicio tecnico y reparacion de calefont Trotter.",
       },
@@ -279,12 +279,6 @@ const MEDIA_LIBRARY = {
         src: "proyectos/revision-calefon-junkers-instalado.jpeg",
         alt: "Revision tecnica de calefont Junkers en Valparaiso",
         caption: "Revision y mantencion de calefont Junkers.",
-      },
-      {
-        type: "image",
-        src: "proyectos/instalacion-termo-electrico-vertical.jpeg",
-        alt: "Instalacion de termo electrico para agua caliente en Quilpue",
-        caption: "Instalacion de termo electrico en vivienda.",
       },
       {
         type: "image",
@@ -310,24 +304,6 @@ const MEDIA_LIBRARY = {
         alt: "Instalacion de base para termo electrico en Villa Alemana",
         caption: "Preparacion e instalacion de soporte para termo electrico.",
       },
-      {
-        type: "video",
-        src: "proyectos/base-termo-electrico-instalacion.mp4",
-        alt: "Video de instalacion de base para termo electrico en Villa Alemana",
-        caption: "Proceso de instalacion de base para termo electrico."
-      },
-      {
-        type: "video",
-        src: "proyectos/base-termo-electrico-ariston-desarmado.mp4",
-        alt: "Video de reparacion de termo electrico Ariston en Quilpue",
-        caption: "Desarme y diagnostico de termo electrico Ariston."
-      },
-      {
-        type: "video",
-        src: "proyectos/instalacion-termo-electrico-a-nuevo.mp4",
-        alt: "Video de instalacion de termo electrico nuevo en Viña del Mar",
-        caption: "Instalacion profesional de termo electrico."
-      }
     ]
   },
   bath: {

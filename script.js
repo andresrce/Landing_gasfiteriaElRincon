@@ -216,26 +216,39 @@ const MEDIA_LIBRARY = {
     items: [
       {
         type: "image",
+        src: "proyectos/instalacion-red-agua-cobre-reparacion-filtracion.jpeg",
+        alt: "Reparacion de red de agua en tuberia de cobre en Villa Alemana",
+        caption: "Reparacion de red de agua domiciliaria en tuberia de cobre.",
+      },
+      {
+        type: "image",
         src: "proyectos/reparacion-filtracion-tuberia-pvc.jpeg",
-        alt: "Reparacion de tuberia PVC con filtracion de agua en casa",
-        caption: "Reparacion de filtracion en tuberia PVC para evitar perdida de agua."
+        alt: "Reparacion de tuberia PVC con filtracion de agua en Quilpue",
+        caption: "Reparacion de filtracion en tuberia PVC para evitar perdida de agua.",
       },
       {
         type: "image",
         src: "proyectos/reparacion-desague-pvc.jpeg",
-        alt: "Reparacion de desague PVC domiciliario por fuga y obstruccion",
-        caption: "Correccion de desague PVC en red domiciliaria."
+        alt: "Reparacion de desague PVC domiciliario en Viña del Mar",
+        caption: "Reparacion de sistema de desague domiciliario.",
       },
       {
         type: "image",
-        src: "proyectos/instalacion-red-agua-cobre-reparacion-filtracion.jpeg",
-        alt: "Instalacion de red de agua en cobre para reparacion de filtracion",
-        caption: "Renovacion de red de agua en cobre para mejorar presion y durabilidad."
+        src: "proyectos/conexion-agua-lavamanos-griferia.jpeg",
+        alt: "Conexion de agua a lavamanos con griferia nueva en Valparaiso",
+        caption: "Conexion de lavamanos a red de agua domiciliaria.",
       },
       {
         type: "video",
-        src: "proyectos/reparacion-conexion-desague.mp4",
-        caption: "Video de reparacion de conexion y desague en instalacion sanitaria."
+        src: "proyectos/reparacion-filtracion-tuberia-pvc.mp4",
+        alt: "Video de reparacion de tuberia PVC con filtracion en Quilpue",
+        caption: "Proceso de reparacion de filtracion en tuberia PVC."
+      },
+      {
+        type: "video",
+        src: "proyectos/reparacion-desague-pvc.mp4",
+        alt: "Video de reparacion de desague PVC en Viña del Mar",
+        caption: "Trabajo de reparacion de desague domiciliario."
       }
     ]
   },
@@ -245,78 +258,75 @@ const MEDIA_LIBRARY = {
     items: [
       {
         type: "image",
-        src: "proyectos/base-termo-electrico-ariston-desarmado.jpeg",
-        alt: "Base de termo electrico desarmado para reparacion y mantencion",
-        caption: "Desarme de termo electrico para diagnostico y reparacion."
+        src: "proyectos/instalacion-calefon-splendid-10-litros.jpeg",
+        alt: "Instalacion de calefont Splendid en vivienda de Villa Alemana",
+        caption: "Instalacion de calefont para sistema de agua caliente.",
       },
       {
         type: "image",
-        src: "proyectos/desarme-termo-electrico-reparacion.jpeg",
-        alt: "Desarme de termo electrico para reparacion de agua caliente",
-        caption: "Revision interna de termo electrico con falla de agua caliente."
+        src: "proyectos/reparacion-calefont.jpeg",
+        alt: "Reparacion de calefont a gas en casa en Quilpue",
+        caption: "Diagnostico y reparacion de calefont domiciliario.",
       },
       {
         type: "image",
-        src: "proyectos/resistencia-termo-electrico-con-sarro.jpeg",
-        alt: "Resistencia de termo electrico con sarro en mantencion preventiva",
-        caption: "Mantencion de termo electrico con acumulacion de sarro."
+        src: "proyectos/reparacion-calefont-trotter.jpeg",
+        alt: "Reparacion de calefont Trotter en vivienda en Viña del Mar",
+        caption: "Servicio tecnico y reparacion de calefont Trotter.",
       },
       {
         type: "image",
-        src: "proyectos/resistencia-termo-electrico-calcificada.jpeg",
-        alt: "Resistencia calcificada de termo electrico para reparacion",
-        caption: "Componente calcificado que afecta el rendimiento del termo."
-      },
-      {
-        type: "image",
-        src: "proyectos/instalacion-termo-electrico-bajo-lavaplatos.jpeg",
-        alt: "Instalacion de termo electrico bajo lavaplatos en cocina",
-        caption: "Instalacion de termo electrico bajo lavaplatos."
-      },
-      {
-        type: "image",
-        src: "proyectos/termo-electrico-instalado-bano.jpeg",
-        alt: "Termo electrico instalado en baño para agua caliente",
-        caption: "Equipo instalado para suministro de agua caliente en baño."
+        src: "proyectos/revision-calefon-junkers-instalado.jpeg",
+        alt: "Revision tecnica de calefont Junkers en Valparaiso",
+        caption: "Revision y mantencion de calefont Junkers.",
       },
       {
         type: "image",
         src: "proyectos/instalacion-termo-electrico-vertical.jpeg",
-        alt: "Instalacion vertical de termo electrico domiciliario",
-        caption: "Montaje vertical de termo electrico con conexion segura."
+        alt: "Instalacion de termo electrico para agua caliente en Quilpue",
+        caption: "Instalacion de termo electrico en vivienda.",
+      },
+      {
+        type: "image",
+        src: "proyectos/desarme-termo-electrico-reparacion.jpeg",
+        alt: "Reparacion interna de termo electrico en Villa Alemana",
+        caption: "Desarme de termo electrico para mantencion.",
+      },
+      {
+        type: "image",
+        src: "proyectos/resistencia-termo-electrico-calcificada.jpeg",
+        alt: "Resistencia de termo electrico con sarro en Viña del Mar",
+        caption: "Cambio y limpieza de resistencia de termo electrico.",
+      },
+      {
+        type: "image",
+        src: "proyectos/base-termo-electrico-ariston-desarmado.jpeg",
+        alt: "Desarme de termo electrico Ariston para reparacion en Valparaiso",
+        caption: "Revision interna de termo electrico Ariston.",
       },
       {
         type: "image",
         src: "proyectos/base-termo-electrico-instalacion.jpeg",
-        alt: "Base de instalacion de termo electrico en vivienda",
-        caption: "Preparacion de base para instalacion de termo electrico."
-      },
-      {
-        type: "image",
-        src: "proyectos/instalacion-termo-electrico-anwo.jpeg",
-        alt: "Instalacion de termo electrico Anwo para agua caliente",
-        caption: "Instalacion de termo electrico Anwo en domicilio."
-      },
-      {
-        type: "image",
-        src: "proyectos/conexion-termo-electrico-instalacion-agua-caliente.jpeg",
-        alt: "Conexion de termo electrico a red de agua caliente",
-        caption: "Conexion final de termo electrico a sistema de agua caliente."
+        alt: "Instalacion de base para termo electrico en Villa Alemana",
+        caption: "Preparacion e instalacion de soporte para termo electrico.",
       },
       {
         type: "video",
-        src: "proyectos/reparacion-calefont.mp4",
-        caption: "Video de reparacion de calefont con falla de encendido."
+        src: "proyectos/base-termo-electrico-instalacion.mp4",
+        alt: "Video de instalacion de base para termo electrico en Villa Alemana",
+        caption: "Proceso de instalacion de base para termo electrico."
       },
       {
         type: "video",
-        src: "proyectos/reparacion-calefont-trotter.mp4",
-        caption: "Video de reparacion de calefont Trotter en domicilio."
+        src: "proyectos/base-termo-electrico-ariston-desarmado.mp4",
+        alt: "Video de reparacion de termo electrico Ariston en Quilpue",
+        caption: "Desarme y diagnostico de termo electrico Ariston."
       },
       {
         type: "video",
-        src: "proyectos/filtracion-calefont-gas.mp4",
-        caption: "Video de revision de calefont con filtracion y problema de gas."
+        src: "proyectos/instalacion-termo-electrico-a-nuevo.mp4",
+        alt: "Video de instalacion de termo electrico nuevo en Viña del Mar",
+        caption: "Instalacion profesional de termo electrico."
       }
     ]
   },
@@ -326,37 +336,39 @@ const MEDIA_LIBRARY = {
     items: [
       {
         type: "image",
+        src: "proyectos/cambio-griferia-bano.jpeg",
+        alt: "Cambio de griferia en lavamanos de baño en Valparaiso",
+        caption: "Instalacion de griferia nueva en baño.",
+      },
+      {
+        type: "image",
         src: "proyectos/instalacion-llave-lavamanos-bano.jpeg",
-        alt: "Instalacion de llave de lavamanos en baño",
-        caption: "Instalacion de llave de lavamanos en baño."
-      },
-      {
-        type: "image",
-        src: "proyectos/conexion-agua-lavamanos-griferia.jpeg",
-        alt: "Conexion de agua para lavamanos y griferia nueva",
-        caption: "Conexion de agua para lavamanos con griferia renovada."
-      },
-      {
-        type: "image",
-        src: "proyectos/valvula-descarga-wc-fanaloza.jpeg",
-        alt: "Reparacion de valvula de descarga de WC Fanaloza",
-        caption: "Cambio y ajuste de valvula de descarga para WC."
+        alt: "Instalacion de llave monomando en lavamanos en Quilpue",
+        caption: "Instalacion de griferia moderna para lavamanos.",
       },
       {
         type: "image",
         src: "proyectos/llave-lavamanos-nueva-griferia.jpeg",
-        alt: "Nueva griferia de lavamanos instalada por gasfiter",
-        caption: "Cambio de griferia de lavamanos en baño."
+        alt: "Instalacion de griferia nueva en baño en Villa Alemana",
+        caption: "Cambio de llave de agua en lavamanos.",
+      },
+      {
+        type: "image",
+        src: "proyectos/valvula-descarga-wc-fanalosa.jpeg",
+        alt: "Reparacion de valvula de descarga de WC en Viña del Mar",
+        caption: "Cambio de valvula de descarga en sanitario.",
+      },
+      {
+        type: "image",
+        src: "proyectos/conexion-agua-lavamanos-griferia.jpeg",
+        alt: "Conexion de agua a lavamanos con griferia nueva en Valparaiso",
+        caption: "Conexion de lavamanos a red de agua domiciliaria.",
       },
       {
         type: "video",
-        src: "proyectos/cambio-griferia-baño.mp4",
-        caption: "Video de cambio de griferia en baño."
-      },
-      {
-        type: "video",
-        src: "proyectos/reparacion-conexion-desague.mp4",
-        caption: "Video de reparacion de conexion de desague."
+        src: "proyectos/cambio-griferia-bano.mp4",
+        alt: "Video de cambio de griferia en baño en Valparaiso",
+        caption: "Proceso de instalacion de griferia en baño."
       }
     ]
   },
@@ -366,44 +378,51 @@ const MEDIA_LIBRARY = {
     items: [
       {
         type: "image",
-        src: "proyectos/revision-calefon-junkers-instalado.jpeg",
-        alt: "Revision tecnica de calefon Junkers instalado en domicilio",
-        caption: "Revision tecnica de calefon ya instalado."
+        src: "proyectos/mantencion-filtraciones-gas.jpeg",
+        alt: "Mantencion de instalacion de gas en vivienda en Villa Alemana",
+        caption: "Revision tecnica de conexiones de gas domiciliario.",
       },
       {
         type: "image",
-        src: "proyectos/reparacion-calefon-exterior.jpeg",
-        alt: "Reparacion de calefon exterior en servicio tecnico",
-        caption: "Servicio tecnico en calefon exterior."
+        src: "proyectos/filtracion-calefont-gas.jpeg",
+        alt: "Filtracion detectada en sistema de calefont a gas en Quilpue",
+        caption: "Diagnostico y reparacion de filtraciones en calefont.",
       },
       {
         type: "image",
-        src: "proyectos/mantencion-calefon-exterior.jpeg",
-        alt: "Mantencion de calefon exterior para mejorar funcionamiento",
-        caption: "Mantencion preventiva de calefon exterior."
-      },
-      {
-        type: "image",
-        src: "proyectos/compra-calefon-nuevo-sodimac.jpeg",
-        alt: "Cambio e instalacion de calefon nuevo comprado para vivienda",
-        caption: "Renovacion de calefon por cambio de equipo."
-      },
-      {
-        type: "image",
-        src: "proyectos/instalacion-calefon-splendid-10-litros.jpeg",
-        alt: "Instalacion de calefon Splendid de 10 litros",
-        caption: "Instalacion de calefon Splendid de 10 litros."
+        src: "proyectos/reparacion-desague.jpeg",
+        alt: "Reparacion de desague domiciliario obstruido en Viña del Mar",
+        caption: "Limpieza y reparacion de desagues domiciliarios.",
       },
       {
         type: "image",
         src: "proyectos/reparacion-termo-solar-techo.jpeg",
-        alt: "Reparacion de termo solar en techo para agua caliente",
-        caption: "Servicio tecnico en termo solar instalado en techo."
+        alt: "Reparacion de termo solar instalado en techo en Valparaiso",
+        caption: "Servicio tecnico para sistemas de agua caliente solar.",
+      },
+      {
+        type: "image",
+        src: "proyectos/reparacion-calefont.jpeg",
+        alt: "Servicio tecnico de calefont a gas en Quilpue",
+        caption: "Diagnostico y reparacion de calefont.",
+      },
+      {
+        type: "image",
+        src: "proyectos/reparacion-calefont-trotter.jpeg",
+        alt: "Servicio tecnico de calefont Trotter en Viña del Mar",
+        caption: "Mantencion y reparacion de calefont Trotter.",
       },
       {
         type: "video",
         src: "proyectos/mantencion-filtraciones-gas.mp4",
-        caption: "Video de mantencion tecnica y revision de filtraciones."
+        alt: "Video de mantencion de calefont y conexiones de gas en Valparaiso",
+        caption: "Revision tecnica de sistema de gas domiciliario."
+      },
+      {
+        type: "video",
+        src: "proyectos/reparacion-calefont.mp4",
+        alt: "Video de reparacion de calefont en Quilpue",
+        caption: "Servicio tecnico de calefont a domicilio."
       }
     ]
   }

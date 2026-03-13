@@ -222,33 +222,21 @@ const MEDIA_LIBRARY = {
       },
       {
         type: "image",
-        src: "proyectos/reparacion-filtracion-tuberia-pvc.jpeg",
+        src: "proyectos/reparacion-tuberia-exterior.jpeg",
         alt: "Reparacion de tuberia PVC con filtracion de agua en Quilpue",
         caption: "Reparacion de filtracion en tuberia PVC para evitar perdida de agua.",
       },
       {
         type: "image",
-        src: "proyectos/reparacion-desague-pvc.jpeg",
+        src: "proyectos/reparacion-emergencia-tuberia.jpeg",
         alt: "Reparacion de desague PVC domiciliario en Viña del Mar",
         caption: "Reparacion de sistema de desague domiciliario.",
       },
       {
-        type: "image",
-        src: "proyectos/conexion-agua-lavamanos-griferia.jpeg",
-        alt: "Conexion de agua a lavamanos con griferia nueva en Valparaiso",
-        caption: "Conexion de lavamanos a red de agua domiciliaria.",
-      },
-      {
         type: "video",
-        src: "proyectos/reparacion-filtracion-tuberia-pvc.mp4",
-        alt: "Video de reparacion de tuberia PVC con filtracion en Quilpue",
-        caption: "Proceso de reparacion de filtracion en tuberia PVC."
-      },
-      {
-        type: "video",
-        src: "proyectos/reparacion-desague-pvc.mp4",
-        alt: "Video de reparacion de desague PVC en Viña del Mar",
-        caption: "Trabajo de reparacion de desague domiciliario."
+        src: "proyectos/reparacion-conexion-desague.mp4",
+        alt: "Reparacion de desague emergencia en Viña del Mar",
+        caption: "Reparacion de sistema de desague domiciliario.",
       }
     ]
   },
@@ -258,21 +246,39 @@ const MEDIA_LIBRARY = {
     items: [
       {
         type: "image",
-        src: "proyectos/instalacion-calefon-splendid-10-litros.jpeg",
-        alt: "Instalacion de calefont Splendid en vivienda de Villa Alemana",
-        caption: "Instalacion de calefont para sistema de agua caliente.",
-      },
-      {
-        type: "image",
-        src: "proyectos/reparacion-calefont-exterior.jpeg",
+        src: "proyectos/reparacion-calefon-exterior.jpeg",
         alt: "Reparacion de calefont a gas en casa en Quilpue",
         caption: "Diagnostico y reparacion de calefont domiciliario.",
       },
+      {
+        type: "image",
+        src: "proyectos/reparacion-termotanque-solar.jpeg",
+        alt: "Reparacion en techo de termotanque solar en Villa Alemana",
+        caption: "Reparacion sistema agua caliente en techo Villa Alemana.",
+      },
+      {
+        type: "video",
+        src: "proyectos/filtracion-calefont-gas.mp4",
+        alt: "Reparacion fuga gas calefont en Villa Alemana",
+        caption: "Reparacion fuga gas calefont en Villa Alemana.",
+      },      
       {
         type: "video",
         src: "proyectos/reparacion-calefont-trotter.mp4",
         alt: "Reparacion de calefont Trotter en vivienda en Viña del Mar",
         caption: "Servicio tecnico y reparacion de calefont Trotter.",
+      },
+      {
+        type: "image",
+        src: "proyectos/compra-instalacion-calefon-splendid-10-litros.jpeg",
+        alt: "Compra de calefont Splendid para vivienda de Villa Alemana",
+        caption: "Compra de calefont para sistema de agua caliente.",
+      },
+      {
+        type: "image",
+        src: "proyectos/instalacion-calefon-nuevo-sodimac.jpeg",
+        alt: "Compra e instalacion de calefont Splendid en vivienda de Villa Alemana",
+        caption: "Instalacion de calefont para sistema de agua caliente.",
       },
       {
         type: "image",
@@ -311,8 +317,8 @@ const MEDIA_LIBRARY = {
     summary: "Trabajos de griferia, artefactos sanitarios, WC, lavamanos, lavaplatos y desagues.",
     items: [
       {
-        type: "image",
-        src: "proyectos/cambio-griferia-bano.jpeg",
+        type: "video",
+        src: "proyectos/cambio-griferia-baño.mp4",
         alt: "Cambio de griferia en lavamanos de baño en Valparaiso",
         caption: "Instalacion de griferia nueva en baño.",
       },
@@ -324,27 +330,21 @@ const MEDIA_LIBRARY = {
       },
       {
         type: "image",
-        src: "proyectos/llave-lavamanos-nueva-griferia.jpeg",
-        alt: "Instalacion de griferia nueva en baño en Villa Alemana",
-        caption: "Cambio de llave de agua en lavamanos.",
+        src: "proyectos/griferia-lavamanos.jpeg",
+        alt: "Compra de griferia nueva para baño en Villa Alemana",
+        caption: "Compra de llave de agua para lavamanos.",
       },
       {
         type: "image",
-        src: "proyectos/valvula-descarga-wc-fanalosa.jpeg",
-        alt: "Reparacion de valvula de descarga de WC en Viña del Mar",
-        caption: "Cambio de valvula de descarga en sanitario.",
+        src: "proyectos/instalacion-griferia-ducha.jpeg",
+        alt: "Cambio e instalación de griferia baño en Viña del Mar",
+        caption: "Cambio de griferia ducha.",
       },
       {
         type: "image",
-        src: "proyectos/conexion-agua-lavamanos-griferia.jpeg",
-        alt: "Conexion de agua a lavamanos con griferia nueva en Valparaiso",
-        caption: "Conexion de lavamanos a red de agua domiciliaria.",
-      },
-      {
-        type: "video",
-        src: "proyectos/cambio-griferia-bano.mp4",
-        alt: "Video de cambio de griferia en baño en Valparaiso",
-        caption: "Proceso de instalacion de griferia en baño."
+        src: "proyectos/valvula-wc-fanaloza.jpeg",
+        alt: "Reemplazo valvula marca Fanaloza en Valparaiso",
+        caption: "Reemplazo valvula marca Fanaloza en Valparaiso.",
       }
     ]
   },
@@ -353,52 +353,34 @@ const MEDIA_LIBRARY = {
     summary: "Trabajos generales, revisiones tecnicas, normalizacion y atencion de urgencias.",
     items: [
       {
-        type: "image",
-        src: "proyectos/mantencion-filtraciones-gas.jpeg",
+        type: "video",
+        src: "proyectos/mantencion-filtraciones-gas.mp4",
         alt: "Mantencion de instalacion de gas en vivienda en Villa Alemana",
         caption: "Revision tecnica de conexiones de gas domiciliario.",
       },
       {
         type: "image",
-        src: "proyectos/filtracion-calefont-gas.jpeg",
-        alt: "Filtracion detectada en sistema de calefont a gas en Quilpue",
-        caption: "Diagnostico y reparacion de filtraciones en calefont.",
-      },
-      {
-        type: "image",
-        src: "proyectos/reparacion-desague.jpeg",
-        alt: "Reparacion de desague domiciliario obstruido en Viña del Mar",
-        caption: "Limpieza y reparacion de desagues domiciliarios.",
-      },
-      {
-        type: "image",
-        src: "proyectos/reparacion-termo-solar-techo.jpeg",
-        alt: "Reparacion de termo solar instalado en techo en Valparaiso",
-        caption: "Servicio tecnico para sistemas de agua caliente solar.",
-      },
-      {
-        type: "image",
-        src: "proyectos/reparacion-calefont.jpeg",
-        alt: "Servicio tecnico de calefont a gas en Quilpue",
-        caption: "Diagnostico y reparacion de calefont.",
-      },
-      {
-        type: "image",
-        src: "proyectos/reparacion-calefont-trotter.jpeg",
-        alt: "Servicio tecnico de calefont Trotter en Viña del Mar",
-        caption: "Mantencion y reparacion de calefont Trotter.",
+        src: "proyectos/reparacion-emergencia-tuberia.jpeg",
+        alt: "Reparación sistema desague en Viña del Mar",
+        caption: "Reparación sistema seague domiciliario.",
       },
       {
         type: "video",
-        src: "proyectos/mantencion-filtraciones-gas.mp4",
-        alt: "Video de mantencion de calefont y conexiones de gas en Valparaiso",
-        caption: "Revision tecnica de sistema de gas domiciliario."
+        src: "proyectos/filtracion-calefont-gas.mp4",
+        alt: "Filtracion detectada en sistema de calefont a gas en Villa Alemana",
+        caption: "Diagnostico de filtraciones en calefont.",
       },
       {
         type: "video",
         src: "proyectos/reparacion-calefont.mp4",
-        alt: "Video de reparacion de calefont en Quilpue",
-        caption: "Servicio tecnico de calefont a domicilio."
+        alt: "Reparacion de calefont confiltracion de gas en Villa Alemana",
+        caption: "Reparación y mantención de filtración gas.",
+      },
+      {
+        type: "image",
+        src: "proyectos/reparacion-tuberia-exterior.jpeg",
+        alt: "Reparacion de sistema de agua exterior en Villa Alemana",
+        caption: "Reparación de sistema de agua y tuberia exterior.",
       }
     ]
   }
